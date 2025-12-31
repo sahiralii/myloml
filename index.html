@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For My Love Rishita ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ff4e8a, #ffb347, #6a5acd);
+            background-size: 400% 400%;
+            animation: bgMove 10s infinite alternate;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: left; }
+            100% { background-position: right; }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 60px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px pink; }
+            to { text-shadow: 0 0 25px red; }
+        }
+
+        .card {
+            background: rgba(255,255,255,0.15);
+            margin: 40px auto;
+            padding: 30px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255,255,255,0.3);
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .heart {
+            position: fixed;
+            color: pink;
+            font-size: 20px;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { top: -10%; opacity: 1; }
+            100% { top: 110%; opacity: 0; }
+        }
+
+        footer {
+            margin: 40px 0;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body onload="startLove()">
+
+    <h1>❤️ Happy New Year Rishita ❤️</h1>
+
+    <div class="card">
+        <h2>My Love, My World 🌍</h2>
+        <p>
+            Rishita, every smile of yours lights up my life.<br>
+            Every moment with you is my favorite moment.<br><br>
+            This New Year, I promise to love you more,<br>
+            care for you deeper,<br>
+            and YOUR EYES ARE JUST MINE 💖
+        </p>
+    </div>
+
+    <button onclick="lovePopup()">Click for a Surprise 💌</button>
+    <button onclick="promisePopup()">My Promise to You 💍</button>
+    <button onclick="newYearPopup()">New Year Wish 🎆</button>
+
+    <footer>
+        Made with love by her dumb and slow bf💕 
+    </footer>
+
+    <script>
+        function lovePopup() {
+            alert("Rishita ❤️\nYou are the best thing that ever happened to me.\nI love you smm 💖");
+        }
+
+        function promisePopup() {
+            alert("My Promise \nI promise i will not disappoint you this year.\nForever yours 💕");
+        }
+
+        function newYearPopup() {
+            alert("🎆 Happy New Year My Love 🎆\nyou know right how much i love you,\nyou are so pretty btw ❤️");
+        }
+
+        function startLove() {
+            setTimeout(() => {
+                alert("Hey Rishuuuu 💖\n😘");
+            }, 1000);
+
+            setTimeout(() => {
+                alert("You are my today,\nmy tomorrow,\nand my forever ❤️");
+            }, 4000);
+
+            setInterval(createHeart, 300);
+        }
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+    </script>
+
+</body>
+</html>
